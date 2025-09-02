@@ -1,5 +1,5 @@
 
-FROM debian:buster-slim
+FROM debian:stable-slim
 ARG UPX_VER
 ARG UPLOADER_VER
 ENV UPX_VER=${UPX_VER:-4.0.0}
@@ -34,5 +34,5 @@ RUN export arch=$(dpkg --print-architecture) && wget --no-check-certificate --pr
 COPY *.sh /
 ENTRYPOINT ["/entrypoint.sh"]
 
-LABEL maintainer = "Jay Zhang <wangyoucao577@gmail.com>"
-LABEL org.opencontainers.image.source = "https://github.com/wangyoucao577/go-release-action"
+LABEL maintainer = "Robert Willert"
+LABEL org.opencontainers.image.source = "https://github.com/rwillert/go-release-action"
